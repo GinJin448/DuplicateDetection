@@ -68,13 +68,13 @@ namespace ForDuplicateDetection
 
         public string NoDuplication()
         {
-            //falseを引数としてメソッドDetectionに渡すことで、重複していない文字を取得して返す
+            //falseを引数としてメソッドDetectionに渡して、重複していない文字を取得して返す
             return Detection(false);
         }
 
         public string Duplication()
         {
-            //trueを引数としてメソッドDetectionに渡すことで、重複している文字を取得して返す
+            //trueを引数としてメソッドDetectionに渡して、重複している文字を取得して返す
             return Detection(true);
         }
     }

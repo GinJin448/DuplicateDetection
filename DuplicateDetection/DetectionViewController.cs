@@ -30,7 +30,7 @@ namespace DuplicateDetection
             var detection = new ForDuplicateDetection.DuplicateDetection();
             detection.TextValue = this.TextValue;
 
-            // メインウィンドウから受け取った値を外部ライブラリForDuplicateDetectionに渡し、重複していない値をTextViewにセット
+            // 重複していない値をdetectionText1にセット
             this.detectionText1.Value = detection.NoDuplication();
 
             if (this.detectionText1.Value.Length == 0)
@@ -38,7 +38,7 @@ namespace DuplicateDetection
                 this.detectionText1.Value = "何も入力されていません。";
             }
 
-            // メインウィンドウから受け取った値を外部ライブラリForDuplicateDetectionに渡し、重複している値をTextViewにセット
+            // 重複している値をdetectionText2にセット
             this.detectionText2.Value = detection.Duplication();
 
             if (this.detectionText2.Value.Length == 0)
