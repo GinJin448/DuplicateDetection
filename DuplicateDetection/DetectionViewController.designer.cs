@@ -18,6 +18,9 @@ namespace DuplicateDetection
 		[Outlet]
 		AppKit.NSTextView detectionText2 { get; set; }
 
+		[Outlet]
+		AppKit.NSTextField wordsCount { get; set; }
+
 		[Action ("sortMenu:")]
 		partial void sortMenu (Foundation.NSObject sender);
 
@@ -29,6 +32,11 @@ namespace DuplicateDetection
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (wordsCount != null) {
+				wordsCount.Dispose ();
+				wordsCount = null;
+			}
+
 			if (detectionText1 != null) {
 				detectionText1.Dispose ();
 				detectionText1 = null;

@@ -829,15 +829,6 @@
                                     <action selector="sortMenu2:" target="18h-4N-4W4" id="mYx-w4-yVe"/>
                                 </connections>
                             </popUpButton>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="thn-qG-dbW">
-                                <rect key="frame" x="232" y="393" width="37" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="jd5-WV-NBo">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pbs-b9-eJO">
                                 <rect key="frame" x="212" y="13" width="77" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -921,11 +912,23 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="thn-qG-dbW">
+                                <rect key="frame" x="158" y="393" width="185" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="テキストが入力されていません。" id="jd5-WV-NBo">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="thn-qG-dbW" firstAttribute="centerX" secondItem="P8B-sn-Qn7" secondAttribute="centerX" id="mZZ-Fv-uC1"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="detectionText1" destination="8hg-wq-gGd" id="adt-ma-K8R"/>
                         <outlet property="detectionText2" destination="PKx-t4-L4j" id="frX-En-8BT"/>
+                        <outlet property="wordsCount" destination="thn-qG-dbW" id="4xo-4S-stJ"/>
                     </connections>
                 </viewController>
                 <customObject id="Zk9-K3-h90" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
