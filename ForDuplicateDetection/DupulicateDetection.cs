@@ -22,8 +22,7 @@ namespace ForDuplicateDetection
         {
             int fullCount = 0;
             int count = 0;
-            string[] del = { "\n" };
-            string[] arr = this.TextValue.Split(del, StringSplitOptions.None);
+            string[] arr = this.TextValue.Split("\n", StringSplitOptions.None);
 
             var wordList = new List<string>();
             var duplicates = new List<string>();
@@ -34,19 +33,20 @@ namespace ForDuplicateDetection
             {
                 duplicates = wordList.Distinct().ToList();
                 count = duplicates.Count();
-                this.WordsCount = fullCount.ToString() + "単語から" + count.ToString() + "語を抽出し、";
+                this.WordsCount = fullCount.ToString() + "語から" + count.ToString() + "単語を抽出し、";
             }
             else if (flag == true)
             {
                 duplicates = wordList.GroupBy(name => name).Where(name => name.Count() > 1).Select(group => group.Key).ToList();
-                count = duplicates.Count();
 
                 var noDuplicate = new List<string>();
                 noDuplicate = wordList.Distinct().ToList();
 
-                this.WordsCount += count.ToString() + "単語の重複を計";
                 count = wordList.Count() - noDuplicate.Count();
-                this.WordsCount += count.ToString() + "語検出しました。";
+                this.WordsCount += "計" +count.ToString() + "語の";
+                
+                count = duplicates.Count();
+                this.WordsCount += count.ToString() + "単語の重複を検出しました。";
 
                 for (int i = 0; i < duplicates.Count(); i++)
                 {

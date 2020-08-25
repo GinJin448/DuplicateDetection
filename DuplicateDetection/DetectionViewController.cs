@@ -28,19 +28,7 @@ namespace DuplicateDetection
             base.ViewDidLoad();
 
             var detection = new ForDuplicateDetection.DuplicateDetection();
-
-            string[] del = { "\n" };
-            string[] arr = this.TextValue.Split(del, StringSplitOptions.None);
-
-            int count = arr.Count();
-
             detection.TextValue = this.TextValue;
-
-            if (detection.TextValue.Length > 0)
-            {
-                detection.WordsCount = count.ToString() + "語";
-            }
-            Console.WriteLine(detection.WordsCount);
 
             // メインウィンドウから受け取った値を外部ライブラリForDuplicateDetectionに渡し、重複していない値をTextViewにセット
             this.detectionText1.Value = detection.NoDuplication();
@@ -49,7 +37,6 @@ namespace DuplicateDetection
             {
                 this.detectionText1.Value = "何も入力されていません。";
             }
-            Console.WriteLine(detection.WordsCount);
 
             // メインウィンドウから受け取った値を外部ライブラリForDuplicateDetectionに渡し、重複している値をTextViewにセット
             this.detectionText2.Value = detection.Duplication();
@@ -58,7 +45,6 @@ namespace DuplicateDetection
             {
                 this.detectionText2.Value = "重複している文字はありません。";
             }
-            Console.WriteLine(detection.WordsCount);
 
             if (detection.TextValue.Length > 0)
             {
