@@ -777,25 +777,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="500" height="429"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oid-ee-w27">
-                                <rect key="frame" x="90" y="329" width="77" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="push" title="昇順" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="1SA-Tn-zuW" id="qE7-u7-7RI">
-                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                    <menu key="menu" id="3mL-dE-LC3">
-                                        <items>
-                                            <menuItem title="昇順" state="on" id="1SA-Tn-zuW"/>
-                                            <menuItem title="降順" id="9N2-h8-Tpv"/>
-                                        </items>
-                                    </menu>
-                                </popUpButtonCell>
-                                <connections>
-                                    <action selector="sortMenu1:" target="18h-4N-4W4" id="POK-1m-Xmx"/>
-                                </connections>
-                            </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yb5-Mw-bWH">
-                                <rect key="frame" x="66" y="361" width="125" height="16"/>
+                                <rect key="frame" x="68" y="361" width="125" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="重複修正後のテキスト" id="ice-FQ-UDT">
                                     <font key="font" metaFont="system"/>
@@ -803,32 +786,6 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VgK-uA-GoK">
-                                <rect key="frame" x="308" y="361" width="125" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="重複しているテキスト" id="ady-74-pDe">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aE4-zB-cAF">
-                                <rect key="frame" x="332" y="329" width="77" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="push" title="昇順" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="U1F-lL-Lsa" id="gZn-ga-f0m">
-                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                    <menu key="menu" id="EnS-pV-cnT">
-                                        <items>
-                                            <menuItem title="昇順" state="on" id="U1F-lL-Lsa"/>
-                                            <menuItem title="降順" id="I5x-VT-in9"/>
-                                        </items>
-                                    </menu>
-                                </popUpButtonCell>
-                                <connections>
-                                    <action selector="sortMenu2:" target="18h-4N-4W4" id="mYx-w4-yVe"/>
-                                </connections>
-                            </popUpButton>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pbs-b9-eJO">
                                 <rect key="frame" x="212" y="13" width="77" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -915,6 +872,51 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="thn-qG-dbW">
                                 <rect key="frame" x="158" y="393" width="185" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="テキストが入力されていません。" id="jd5-WV-NBo">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tpg-6h-7z8">
+                                <rect key="frame" x="92" y="329" width="77" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" title=" -- " bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="xLc-PW-1oG" id="tyl-pB-V6B">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" id="JbC-nc-ykM">
+                                        <items>
+                                            <menuItem title=" -- " state="on" id="xLc-PW-1oG"/>
+                                            <menuItem title="昇順" id="ObA-yB-eH3"/>
+                                            <menuItem title="降順" id="9BW-W0-BTa"/>
+                                            <menuItem title="ランダム" id="ZEU-C6-Ji6">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2lH-PJ-nKk" userLabel="Item 2">
+                                <rect key="frame" x="332" y="329" width="77" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" title=" -- " bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Fr1-xz-3QE" id="4zy-zM-hZb" userLabel="Item 2">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" id="lwR-om-aVd">
+                                        <items>
+                                            <menuItem title=" -- " state="on" id="Fr1-xz-3QE"/>
+                                            <menuItem title="昇順" id="Ndg-mM-m2E"/>
+                                            <menuItem title="降順" id="yyf-6c-Agm"/>
+                                            <menuItem title="ランダム" id="D3X-jG-hmz">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VgK-uA-GoK">
+                                <rect key="frame" x="308" y="361" width="125" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="重複しているテキスト" id="ady-74-pDe">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
